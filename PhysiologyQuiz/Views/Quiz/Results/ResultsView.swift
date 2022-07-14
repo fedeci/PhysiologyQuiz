@@ -48,41 +48,42 @@ struct ResultsView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                ZStack {
-                    Rectangle()
-                        .frame(height: 160)
-                        .cornerRadius(15)
-                    HStack {
-                        VStack(alignment: .leading, spacing: 0) {
-                            HStack(spacing: 4) {
-                                Text("\(points, specifier: "%.2f") / \(totalPoints, specifier: "%.2f")")
-                                    .foregroundColor(Color(uiColor: .label))
-                                    .font(.system(.title2, design: .rounded).weight(.heavy))
-                                Text("punti")
-                                    .foregroundColor(Color(uiColor: .secondaryLabel))
-                                    .font(.system(.title3, design: .rounded).weight(.medium))
+            ScrollView {
+                VStack {
+                    ZStack {
+                        Rectangle()
+                            .frame(height: 160)
+                            .cornerRadius(15)
+                        HStack {
+                            VStack(alignment: .leading, spacing: 0) {
+                                HStack(spacing: 4) {
+                                    Text("\(points, specifier: "%.2f") / \(totalPoints, specifier: "%.2f")")
+                                        .foregroundColor(Color(uiColor: .label))
+                                        .font(.system(.title2, design: .rounded).weight(.heavy))
+                                    Text("punti")
+                                        .foregroundColor(Color(uiColor: .secondaryLabel))
+                                        .font(.system(.title3, design: .rounded).weight(.medium))
+                                }
+                                Spacer()
+                                SmallStatView(label: Text("\(rightOnTotal * 100, specifier: "%.2f") %"), color: .green)
+                                SmallStatView(label: Text("\(wrongOnTotal * 100, specifier: "%.2f") %"), color: .red)
+                                SmallStatView(label: Text("\(nonGivenOnTotal * 100, specifier: "%.2f") %"), color: .yellow)
                             }
-                            Spacer()
-                            SmallStatView(label: Text("\(rightOnTotal * 100, specifier: "%.2f") %"), color: .green)
-                            SmallStatView(label: Text("\(wrongOnTotal * 100, specifier: "%.2f") %"), color: .red)
-                            SmallStatView(label: Text("\(nonGivenOnTotal * 100, specifier: "%.2f") %"), color: .yellow)
+                            Spacer(minLength: 30)
+                            Chart(data: (rightOnTotal, wrongOnTotal, nonGivenOnTotal))
+                                .aspectRatio(1.3, contentMode: .fit)
                         }
-                        Spacer(minLength: 30)
-                        Chart(data: (rightOnTotal, wrongOnTotal, nonGivenOnTotal))
-                            .aspectRatio(1.3, contentMode: .fit)
-                    }
                         .padding()
-                }
+                    }
                     .frame(height: 160)
-                ResultRowView(configuration: .init(title: "Risposte corrette", titleColor: .green, systemImage: "checkmark.circle.fill", answers: viewModel.correctAnswers, points: correctPoints))
-                ResultRowView(configuration: .init(title: "Risposte errate", titleColor: .red, systemImage: "multiply.circle.fill", answers: viewModel.wrongAnswers, points: wrongPoints))
-                ResultRowView(configuration: .init(title: "Risposte non date", titleColor: .yellow, systemImage: "questionmark.circle.fill", answers: viewModel.nonGivenAnswers, points: nonGivenPoints))
-                Spacer()
+                    ResultRowView(configuration: .init(title: "Risposte corrette", titleColor: .green, systemImage: "checkmark.circle.fill", answers: viewModel.correctAnswers, points: correctPoints))
+                    ResultRowView(configuration: .init(title: "Risposte errate", titleColor: .red, systemImage: "multiply.circle.fill", answers: viewModel.wrongAnswers, points: wrongPoints))
+                    ResultRowView(configuration: .init(title: "Risposte non date", titleColor: .yellow, systemImage: "questionmark.circle.fill", answers: viewModel.nonGivenAnswers, points: nonGivenPoints))
+                    Spacer()
+                }
+                .foregroundColor(Color(uiColor: UIColor.secondarySystemBackground))
+                .padding()
             }
-            .foregroundColor(Color(uiColor: UIColor.secondarySystemBackground))
-            .padding()
-            .background(Color(uiColor: UIColor.systemBackground))
             .navigationTitle("Punteggi")
             .toolbar {
                 Button {
@@ -91,7 +92,8 @@ struct ResultsView: View {
                     Text("Fine")
                         .bold()
                 }
-
+                .accessibilityAddTraits([.isButton])
+                .accessibilityIdentifier("closeButton")
             }
         }
     }

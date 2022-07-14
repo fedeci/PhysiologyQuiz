@@ -38,31 +38,35 @@ struct ContentView: View {
                     .simultaneousGesture(TapGesture().onEnded {
                         viewModel.resetQuiz()
                     })
+                    .accessibilityAddTraits([.isButton])
+                    .accessibilityIdentifier("startQuiz")
                 }
                 .padding()
             }
             .navigationTitle("Quiz fisiologia")
             .toolbar {
-                ToolbarItem(placement: .navigation) {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
                     Button {
                         isShowingInfo.toggle()
                     } label: {
                         Image(systemName: "questionmark.circle.fill")
                     }
-                }
-                ToolbarItem(placement: .navigation) {
+                
                     NavigationLink {
                         SettingsView(viewModel: viewModel)
                     } label: {
                         Image(systemName: "gearshape.fill")
                     }
+                
                 }
-                ToolbarItem {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         isShowingQuestions.toggle()
                     } label: {
                         Image(systemName: "list.bullet")
                     }
+                        .accessibilityAddTraits([.isButton])
+                        .accessibilityIdentifier("allQuestionsButton")
                 }
             }
             .sheet(isPresented: $isShowingInfo) {

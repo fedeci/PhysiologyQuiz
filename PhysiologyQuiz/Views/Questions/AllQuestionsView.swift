@@ -42,6 +42,8 @@ struct AllQuestionsView: View {
                         Text("Fine")
                             .bold()
                     }
+                    .accessibilityAddTraits([.isButton])
+                    .accessibilityIdentifier("closeButton")
 
                 }
             }

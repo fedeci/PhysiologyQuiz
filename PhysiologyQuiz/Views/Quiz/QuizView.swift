@@ -44,7 +44,9 @@ struct QuizView: View {
 
                     }
                 }
-                .disabled(!isShowingResults)
+                    .disabled(!isShowingResults)
+                    .accessibilityAddTraits([.isButton])
+                    .accessibilityIdentifier("showResultsButton")
                 HStack {
                     Button {
                         viewModel.answerQuestionAt(value: false)
@@ -70,6 +72,8 @@ struct QuizView: View {
                         }
                     }
                         .disabled(isShowingResults)
+                        .accessibilityAddTraits([.isButton])
+                        .accessibilityIdentifier("falseButton")
                     Spacer()
                     Button {
                         viewModel.answerQuestionAt(value: true)
@@ -95,13 +99,15 @@ struct QuizView: View {
                         }
                     }
                         .disabled(isShowingResults)
+                        .accessibilityAddTraits([.isButton])
+                        .accessibilityIdentifier("trueButton")
                 }
                 .padding(.top)
             }
-            .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local).onEnded { value in
+            .gesture(DragGesture(minimumDistance: 30, coordinateSpace: .local).onEnded { value in
                 if value.startLocation.x > value.location.x {
-                    viewModel.skipQuestions(1)
                     // swipe to left
+                    viewModel.skipQuestions(1)
                 } else {
                     viewModel.skipQuestions(-1)
                 }
@@ -109,18 +115,17 @@ struct QuizView: View {
             .padding()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Text("\(viewModel.counter + 1) / \(viewModel.settings.numberOfQuestions)")
                         .bold()
-                }
-                ToolbarItem {
                     Button {
                         isShowingResults ? viewModel.resetQuiz() : print("show solutions here")
                         isShowingResults.toggle()
                     } label: {
                         Image(systemName: isShowingResults ? "arrow.counterclockwise.circle.fill" : "forward.end.fill")
                     }
-
+                        .accessibilityAddTraits([.isButton])
+                        .accessibilityIdentifier(isShowingResults ? "restartButton" : "submitButton")
                 }
             }
             .sheet(isPresented: $isShowingResultsSheet) {
