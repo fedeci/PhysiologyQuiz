@@ -1,171 +1,176 @@
-[{
-    "answer": true,
-    "question": "In condizioni normali la pressione parziale di ossigeno nel sangue arterioso vale circa 100mmHg"
-  },
-  {
-    "answer": true,
-    "question": "Il muscolo diaframma si contrae durante l'inspirazione"
-  },
-  {
-    "answer": true,
-    "question": "In condizioni normali la saturazione dell'emoglobina nel sangue venoso è maggiore del 50%"
-  },
-  {
-    "answer": false,
-    "question": "Se ad un soggetto sano viene fatto respirare ossigeno puro la quantità di ossigeno nel sangue arterioso risulta più che raddoppiata rispetto a quando respira aria normale"
-  },
-  {
-    "answer": true,
-    "question": "La pressione pleurica è normalmente leggermente negativa rispetto alla pressione esterna"
-  },
-  {
-    "answer": false,
-    "question": "Un rallentamento volontario della ventilazione alveolare diminuisce la concentrazione di CO2 nel sangue"
-  },
-  {
-    "answer": true,
-    "question": "In una condizione di alcalosi metabolica la concentrazione di HCO3- è maggiore del nromale"
-  },
-  {
-    "answer": true,
-    "question": "In una condizione di alcalosi metabolica la compensazione respiratoria produce un aumento della concentrazione ematica di CO2"
-  },
-  {
-    "answer": false,
-    "question": "Il pneumotorace può essere causato dall'ostruzione di una via bronchiale"
-  },
-  {
-    "answer": true,
-    "question": "In una condizione di alcalosi respiratoria il rene riduce l'escrezione di H+ nelle urine V Una condizioni di acidosi metabolica stimola un aumento della ventilazione alveolare"
-  },
-  {
-    "answer": false,
-    "question": "Una condizione di acidosi metabolica può essere casata dal vomito per espulsione del contenuto gastrico"
-  },
-  {
-    "answer": false,
-    "question": "una condizioni di acidosi metabolica è caratterizzata da un aumento della concentrazione ematica di CO2"
-  },
-  {
-    "answer": true,
-    "question": "una condizione di acidosi metabolica è caratterizzata da un aumento di concentrazione ematica di H+"
-  },
-  {
-    "answer": false,
-    "question": "Una condizione di acidosi metabolica può essere causata dall'iperventilazione che accompagna uno stato di ansia"
-  },
-  {
-    "answer": false,
-    "question": "Una condizione di acidosi metabolica può essere corretta da un'aumentata eliminazione renale di HCO3-"
-  },
-  {
-    "answer": false,
-    "question": "Una riduzione della pressione arteriosa può indurre in via riflessa un aumento della diuresi"
-  },
-  {
-    "answer": true,
-    "question": "Un aumento della concentrazione ematica del sangue può indurre in via riflessa un aumento della concentrazione ematica di ormone antidiuretico"
-  },
-  {
-    "answer": false,
-    "question": "Un aumento della concentrazione ematica di renina è provocato da un aumento della concentrazione ematica di angiotensina II"
-  },
-  {
-    "answer": true,
-    "question": "La secrezione di aldosterone è stimolata, tramite molecole intermedie, dalla renina V L'aldosterone favorisce la secrezione di ioni potassio"
-  },
-  {
-    "answer": false,
-    "question": "L'aldosterone è secreto dalla midollare dle surrene"
-  },
-  {
-    "answer": false,
-    "details": "fegato",
-    "question": "L'angiotensina II è è secreta dalla corticale del surrene"
-  },
-  {
-    "answer": true,
-    "question": "La liberazione di adrenalina è stimolata dal sistema simpatico"
-  },
-  {
-    "answer": false,
-    "question": "I processi digestivi sono stimolati dal sistema simpatico"
-  },
-  {
-    "answer": true,
-    "question": "Il pancreas ha funzione endocrina"
-  },
-  {
-    "answer": false,
-    "question": "L'aldosterone è secreto dalla ipofisi anteriore"
-  },
-  {
-    "answer": true,
-    "question": "l'aldosterone è secreto dalla corticale del surrene"
-  },
-  {
-    "answer": false,
-    "question": "l'aldosterone è secreto dalle cellule della macula densa"
-  },
-  {
-    "answer": false,
-    "question": "L'aldosterone favorisce la secrezione di sodio"
-  },
-  {
-    "answer": false,
-    "question": "L'aldosterone provoca nel rene un aumento di secrezione di sodio"
-  },
-  {
-    "answer": false,
-    "details": "acido carbonico/bicarbonato",
-    "question": "Il principale sistema tampone fisiologico è quello dei fosfati"
-  },
-  {
-    "answer": false,
-    "question": "La compensaizone renale dell'alcalosi avviene mediante aumentato riassorbimento di bicarbonato"
-  },
-  {
-    "answer": false,
-    "question": "I brividi accompagnano l'eliminazione di calore in eccesso durante gli episodi febbrili"
-  },
-  {
-    "answer": true,
-    "question": "Il sistema nervoso simpatico regola gli scambi di calore nella porzione più esterna della superficie corporea"
-  },
-  {
-    "answer": false,
-    "question": "I valori dei set point della temperatura corporea in condizioni fisiologiche è assolutamente invariabile durante la vita di un individuo"
-  },
-  {
-    "answer": true,
-    "question": "Il principale distributore di calore tra i vari distretti corporei è il sangue"
-  },
-  {
-    "answer": false,
-    "question": "Un rallentamento volontario della ventilazione alveolare diminuisce la concentrazione di CO2 nel sangue"
-  },
-  {
-    "answer": true,
-    "question": "In una condizione di alcalosi metabolica la concentrazione di HCO3- è maggiore del nromale"
-  },
-  {
-    "answer": true,
-    "question": "In una condizione di alcalosi metabolica la compensazione respiratoria produce un aumento della concentrazione ematica di CO2"
-  },
-  {
-    "answer": true,
-    "question": "Sull'equilibrio acido-base uno stato di alcalosi metabolica può essere causato da una perdita di acidi gastrici a causa di vomito."
-  },
-  {
-    "answer": true,
-    "question": "Uno stato di alcalosi metabolica è caratterizzato da una concentrazione di ioni idrogeno nel sangue più bassa del normale"
-  },
-  {
-    "answer": false,
-    "question": "Uno stato di alcalosi metabolica presenta una concentrazione di CO2 più bassa del normale."
-  },
-  {
-    "answer": true,
-    "question": "Uno stato di alcalosi metabolica può essere compensata da una aumentata eliminazione renale di HCO3-"
-  }
+[
+    {
+        name: "Equilibrio acido base"
+        questions: [
+            {
+                "answer": true,
+                "question": "In condizioni normali la pressione parziale di ossigeno nel sangue arterioso vale circa 100mmHg"
+            },
+            {
+                "answer": true,
+                "question": "Il muscolo diaframma si contrae durante l'inspirazione"
+            },
+            {
+                "answer": true,
+                "question": "In condizioni normali la saturazione dell'emoglobina nel sangue venoso è maggiore del 50%"
+            },
+            {
+                "answer": false,
+                "question": "Se ad un soggetto sano viene fatto respirare ossigeno puro la quantità di ossigeno nel sangue arterioso risulta più che raddoppiata rispetto a quando respira aria normale"
+            },
+            {
+                "answer": true,
+                "question": "La pressione pleurica è normalmente leggermente negativa rispetto alla pressione esterna"
+            },
+            {
+                "answer": false,
+                "question": "Un rallentamento volontario della ventilazione alveolare diminuisce la concentrazione di CO2 nel sangue"
+            },
+            {
+                "answer": true,
+                "question": "In una condizione di alcalosi metabolica la concentrazione di HCO3- è maggiore del nromale"
+            },
+            {
+                "answer": true,
+                "question": "In una condizione di alcalosi metabolica la compensazione respiratoria produce un aumento della concentrazione ematica di CO2"
+            },
+            {
+                "answer": false,
+                "question": "Il pneumotorace può essere causato dall'ostruzione di una via bronchiale"
+            },
+            {
+                "answer": true,
+                "question": "In una condizione di alcalosi respiratoria il rene riduce l'escrezione di H+ nelle urine V Una condizioni di acidosi metabolica stimola un aumento della ventilazione alveolare"
+            },
+            {
+                "answer": false,
+                "question": "Una condizione di acidosi metabolica può essere casata dal vomito per espulsione del contenuto gastrico"
+            },
+            {
+                "answer": false,
+                "question": "una condizioni di acidosi metabolica è caratterizzata da un aumento della concentrazione ematica di CO2"
+            },
+            {
+                "answer": true,
+                "question": "una condizione di acidosi metabolica è caratterizzata da un aumento di concentrazione ematica di H+"
+            },
+            {
+                "answer": false,
+                "question": "Una condizione di acidosi metabolica può essere causata dall'iperventilazione che accompagna uno stato di ansia"
+            },
+            {
+                "answer": false,
+                "question": "Una condizione di acidosi metabolica può essere corretta da un'aumentata eliminazione renale di HCO3-"
+            },
+            {
+                "answer": false,
+                "question": "Una riduzione della pressione arteriosa può indurre in via riflessa un aumento della diuresi"
+            },
+            {
+                "answer": true,
+                "question": "Un aumento della concentrazione ematica del sangue può indurre in via riflessa un aumento della concentrazione ematica di ormone antidiuretico"
+            },
+            {
+                "answer": false,
+                "question": "Un aumento della concentrazione ematica di renina è provocato da un aumento della concentrazione ematica di angiotensina II"
+            },
+            {
+                "answer": true,
+                "question": "La secrezione di aldosterone è stimolata, tramite molecole intermedie, dalla renina V L'aldosterone favorisce la secrezione di ioni potassio"
+            },
+            {
+                "answer": false,
+                "question": "L'aldosterone è secreto dalla midollare dle surrene"
+            },
+            {
+                "answer": false,
+                "details": "fegato",
+                "question": "L'angiotensina II è è secreta dalla corticale del surrene"
+            },
+            {
+                "answer": true,
+                "question": "La liberazione di adrenalina è stimolata dal sistema simpatico"
+            },
+            {
+                "answer": false,
+                "question": "I processi digestivi sono stimolati dal sistema simpatico"
+            },
+            {
+                "answer": true,
+                "question": "Il pancreas ha funzione endocrina"
+            },
+            {
+                "answer": false,
+                "question": "L'aldosterone è secreto dalla ipofisi anteriore"
+            },
+            {
+                "answer": true,
+                "question": "l'aldosterone è secreto dalla corticale del surrene"
+            },
+            {
+                "answer": false,
+                "question": "l'aldosterone è secreto dalle cellule della macula densa"
+            },
+            {
+                "answer": false,
+                "question": "L'aldosterone favorisce la secrezione di sodio"
+            },
+            {
+                "answer": false,
+                "question": "L'aldosterone provoca nel rene un aumento di secrezione di sodio"
+            },
+            {
+                "answer": false,
+                "details": "acido carbonico/bicarbonato",
+                "question": "Il principale sistema tampone fisiologico è quello dei fosfati"
+            },
+            {
+                "answer": false,
+                "question": "La compensaizone renale dell'alcalosi avviene mediante aumentato riassorbimento di bicarbonato"
+            },
+            {
+                "answer": false,
+                "question": "I brividi accompagnano l'eliminazione di calore in eccesso durante gli episodi febbrili"
+            },
+            {
+                "answer": true,
+                "question": "Il sistema nervoso simpatico regola gli scambi di calore nella porzione più esterna della superficie corporea"
+            },
+            {
+                "answer": false,
+                "question": "I valori dei set point della temperatura corporea in condizioni fisiologiche è assolutamente invariabile durante la vita di un individuo"
+            },
+            {
+                "answer": true,
+                "question": "Il principale distributore di calore tra i vari distretti corporei è il sangue"
+            },
+            {
+                "answer": false,
+                "question": "Un rallentamento volontario della ventilazione alveolare diminuisce la concentrazione di CO2 nel sangue"
+            },
+            {
+                "answer": true,
+                "question": "In una condizione di alcalosi metabolica la concentrazione di HCO3- è maggiore del nromale"
+            },
+            {
+                "answer": true,
+                "question": "In una condizione di alcalosi metabolica la compensazione respiratoria produce un aumento della concentrazione ematica di CO2"
+            },
+            {
+                "answer": true,
+                "question": "Sull'equilibrio acido-base uno stato di alcalosi metabolica può essere causato da una perdita di acidi gastrici a causa di vomito."
+            },
+            {
+                "answer": true,
+                "question": "Uno stato di alcalosi metabolica è caratterizzato da una concentrazione di ioni idrogeno nel sangue più bassa del normale"
+            },
+            {
+                "answer": false,
+                "question": "Uno stato di alcalosi metabolica presenta una concentrazione di CO2 più bassa del normale."
+            },
+            {
+                "answer": true,
+                "question": "Uno stato di alcalosi metabolica può essere compensata da una aumentata eliminazione renale di HCO3-"
+            }]
+    }
 ]

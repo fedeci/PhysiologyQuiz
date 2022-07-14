@@ -27,7 +27,7 @@ struct ResultsListView: View {
             .navigationTitle(Text(title))
             .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .always))
     }
-    
+
     var searchResults: Questions {
         if searchQuery.isEmpty {
             return questions

@@ -11,14 +11,15 @@ import Combine
 class ViewModel: ObservableObject {
     @Published var settings = SettingsViewModel()
 
+    @Published private(set) var questionsData: QuestionsData = []
     @Published private(set) var questions: Questions = []
     @Published private(set) var selectedQuestions: Questions = []
     @Published var counter: Int = 0
-    
+
     var answeredIndexes: Set<Int> {
         Set(selectedQuestions.enumerated().filter { $0.element.value != nil }.map { $0.offset })
     }
-    
+
     var currentQuestion: Question {
         get { selectedQuestions[counter] }
         set { selectedQuestions[counter] = newValue }
@@ -29,7 +30,7 @@ class ViewModel: ObservableObject {
             q.value == nil
         }
     }
-    
+
     var correctAnswers: Questions {
         selectedQuestions.filter { q in
             q.value != nil && q.value! == q.answer
@@ -41,9 +42,9 @@ class ViewModel: ObservableObject {
             q.value != nil && q.value! != q.answer
         }
     }
-    
-    var anyCancellable: AnyCancellable? = nil
-    
+
+    var anyCancellable: AnyCancellable?
+
     init(_ filename: String, _ `extension`: String) {
         anyCancellable = settings.objectWillChange.sink { [weak self] (_) in
             self?.objectWillChange.send()
@@ -53,30 +54,30 @@ class ViewModel: ObservableObject {
         resetQuiz()
     }
 
-    
     func load(_ filename: String, _ `extension`: String) {
-        
+
         let data: Data
-        
+
         guard let file = Bundle.main.url(forResource: filename, withExtension: `extension`)
         else {
             fatalError("Couldn't find \(filename) in main bundle.")
         }
-        
+
         do {
             data = try Data(contentsOf: file)
         } catch {
             fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
         }
-        
+
         do {
             let decoder = JSONDecoder()
-            questions = try decoder.decode(Questions.self, from: data)
+            questionsData = try decoder.decode(QuestionsData.self, from: data)
+            questions = questionsData.reduce([]) { $0 + $1.questions }
         } catch {
             fatalError("Couldn't parse \(filename) as \(Questions.self):\n\(error)")
         }
     }
-    
+
     private func extractQuestions() {
         let questionsCount = questions.count
         // extract n random questions
@@ -84,7 +85,7 @@ class ViewModel: ObservableObject {
             selectedQuestions.append(questions[Int.random(in: 0..<questionsCount)])
         }
     }
-    
+
     func answerQuestionAt(value: Bool) {
         if currentQuestion.value == value {
             currentQuestion.value = nil
@@ -93,7 +94,7 @@ class ViewModel: ObservableObject {
         }
         skipQuestions(1)
     }
-    
+
     func skipQuestions(_ v: Int) {
         if v > 0 && counter + v < settings.numberOfQuestions {
             counter += v
@@ -101,7 +102,7 @@ class ViewModel: ObservableObject {
             counter -= abs(v)
         }
     }
-    
+
     func resetQuiz() {
         selectedQuestions = []
         counter = 0

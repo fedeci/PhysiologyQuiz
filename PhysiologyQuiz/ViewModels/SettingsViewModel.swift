@@ -12,7 +12,7 @@ class SettingsViewModel: ObservableObject {
     @AppStorage(Keys.nonGivenAnswerPoints.rawValue) var nonGivenAnswer: Double = 0
     @AppStorage(Keys.correctAnswerPoints.rawValue) var correctAnswer: Double = 1
     @AppStorage(Keys.wrongAnswerPoints.rawValue) var wrongAnswer: Double = -0.5
-    
+
     enum Keys: String {
         case numberOfQuestions
         case nonGivenAnswerPoints

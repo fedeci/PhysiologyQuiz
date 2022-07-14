@@ -10,30 +10,30 @@ import SwiftUI
 struct ResultsView: View {
     @Binding var isShowingSheet: Bool
     @ObservedObject var viewModel: ViewModel
-    
+
     var points: Double {
         viewModel.settings.correctAnswer * Double(viewModel.correctAnswers.count) + viewModel.settings.wrongAnswer * Double(viewModel.wrongAnswers.count) + viewModel.settings.nonGivenAnswer * Double(viewModel.nonGivenAnswers.count)
     }
-    
+
     var totalPoints: Double {
         let allCorrectPoints = viewModel.settings.correctAnswer * Double(viewModel.settings.numberOfQuestions)
         let allWrongPoints = viewModel.settings.wrongAnswer * Double(viewModel.settings.numberOfQuestions)
         let allNonGivenPoints = viewModel.settings.nonGivenAnswer * Double(viewModel.settings.numberOfQuestions)
         return [allCorrectPoints, allWrongPoints, allNonGivenPoints].max()!
     }
-    
+
     var rightOnTotal: Double {
         Double(viewModel.correctAnswers.count) / Double(viewModel.settings.numberOfQuestions)
     }
-    
+
     var nonGivenOnTotal: Double {
         Double(viewModel.nonGivenAnswers.count) / Double(viewModel.settings.numberOfQuestions)
     }
-    
+
     var wrongOnTotal: Double {
         Double(viewModel.wrongAnswers.count) / Double(viewModel.settings.numberOfQuestions)
     }
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -79,7 +79,7 @@ struct ResultsView: View {
                     Text("Fine")
                         .bold()
                 }
-                
+
             }
         }
     }
@@ -88,7 +88,7 @@ struct ResultsView: View {
 struct SmallStatView: View {
     var label: Text
     var color: Color
-    
+
     var body: some View {
         HStack(spacing: 6) {
             Rectangle()
@@ -111,7 +111,7 @@ struct ResultRowView: View {
         var systemImage: String
         var answers: Questions
     }
-    
+
     var body: some View {
         NavigationLink {
             ResultsListView(title: configuration.title, questions: configuration.answers)
@@ -143,7 +143,6 @@ struct ResultRowView: View {
         .frame(height: 100)
     }
 }
-
 
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {

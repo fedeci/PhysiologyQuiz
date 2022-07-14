@@ -41,7 +41,7 @@ struct QuizView: View {
                                 : .clear
                             )
                             .bold()
-                        
+
                     }
                 }
                 .disabled(!isShowingResults)
@@ -120,7 +120,7 @@ struct QuizView: View {
                     } label: {
                         Image(systemName: isShowingResults ? "arrow.counterclockwise.circle.fill" : "forward.end.fill")
                     }
-                    
+
                 }
             }
             .sheet(isPresented: $isShowingResultsSheet) {

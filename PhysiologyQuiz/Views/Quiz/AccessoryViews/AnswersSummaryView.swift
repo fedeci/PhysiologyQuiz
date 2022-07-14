@@ -38,7 +38,7 @@ struct AnswersSummaryView: View {
                                 Text("\(i + 1)")
                                     .foregroundColor(.white)
                                     .bold()
-                                
+
                             }
                         }
                     }

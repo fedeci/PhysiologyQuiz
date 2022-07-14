@@ -10,7 +10,7 @@ import SwiftUI
 struct AllQuestionsView: View {
     @State private var searchText = ""
     @Binding var isShowingQuestions: Bool
-    
+
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
@@ -47,7 +47,7 @@ struct AllQuestionsView: View {
             }
         }
     }
-    
+
     var searchResults: Questions {
         if searchText.isEmpty {
             return viewModel.questions

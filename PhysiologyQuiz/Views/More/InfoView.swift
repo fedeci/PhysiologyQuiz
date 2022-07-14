@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InfoView: View {
     @Binding var isShowingInfo: Bool
-    
+
     func emailURL(subject: String = "") -> URL {
         let _subject = "Quiz fisiologia" + (subject.count > 0 ? "- \(subject)" : subject)
         return URL(string: "mailto:fed.ciardi+quiz-fisiologia@gmail.com?subject=\(_subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")")!
@@ -17,7 +17,7 @@ struct InfoView: View {
 
     var body: some View {
         NavigationView {
-            
+
             List {
                 Section("Contribuisci") {
                     Button {
@@ -46,7 +46,7 @@ struct InfoView: View {
                     }
                 }
                 .listRowSeparator(.hidden)
-                
+
                 Section("Legale") {
                     NavigationLink {
                         PrivacyPolicyView()
@@ -56,7 +56,7 @@ struct InfoView: View {
                     }
                 }
                 .listRowSeparator(.hidden)
-                
+
                 Section("Contatti") {
                     Button {
                         UIApplication.shared.open(emailURL())
@@ -66,16 +66,16 @@ struct InfoView: View {
                             Text("Email")
                         }
                     }
-                    
+
                 }
                 .listRowSeparator(.hidden)
-                
+
                 Section("Autore") {
                     Text("Versione")
                     Text("Versione")
                 }
                 .listRowSeparator(.hidden)
-                
+
                 Text("Versione: \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String) (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String))")
             }
             .navigationBarTitleDisplayMode(.inline)
