@@ -1,7 +1,7 @@
 [
     {
-        name: "Equilibrio acido base"
-        questions: [
+        "name": "Equilibrio acido base",
+        "questions": [
             {
                 "answer": true,
                 "question": "In condizioni normali la pressione parziale di ossigeno nel sangue arterioso vale circa 100mmHg"

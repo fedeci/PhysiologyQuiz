@@ -10,9 +10,21 @@ import SwiftUI
 struct ResultsView: View {
     @Binding var isShowingSheet: Bool
     @ObservedObject var viewModel: ViewModel
+    
+    var correctPoints: Double {
+        viewModel.settings.correctAnswer * Double(viewModel.correctAnswers.count)
+    }
+    
+    var wrongPoints: Double {
+        viewModel.settings.wrongAnswer * Double(viewModel.wrongAnswers.count)
+    }
+    
+    var nonGivenPoints: Double {
+        viewModel.settings.nonGivenAnswer * Double(viewModel.nonGivenAnswers.count)
+    }
 
     var points: Double {
-        viewModel.settings.correctAnswer * Double(viewModel.correctAnswers.count) + viewModel.settings.wrongAnswer * Double(viewModel.wrongAnswers.count) + viewModel.settings.nonGivenAnswer * Double(viewModel.nonGivenAnswers.count)
+        correctPoints + wrongPoints + nonGivenPoints
     }
 
     var totalPoints: Double {
@@ -48,8 +60,8 @@ struct ResultsView: View {
                                     .foregroundColor(Color(uiColor: .label))
                                     .font(.system(.title2, design: .rounded).weight(.heavy))
                                 Text("punti")
-                                    .foregroundColor(Color(uiColor: .systemGray))
-                                    .font(.title3.weight(.medium))
+                                    .foregroundColor(Color(uiColor: .secondaryLabel))
+                                    .font(.system(.title3, design: .rounded).weight(.medium))
                             }
                             Spacer()
                             SmallStatView(label: Text("\(rightOnTotal * 100, specifier: "%.2f") %"), color: .green)
@@ -63,9 +75,9 @@ struct ResultsView: View {
                         .padding()
                 }
                     .frame(height: 160)
-                ResultRowView(configuration: .init(title: "Risposte corrette", titleColor: .green, systemImage: "checkmark.circle.fill", answers: viewModel.correctAnswers))
-                ResultRowView(configuration: .init(title: "Risposte errate", titleColor: .red, systemImage: "multiply.circle.fill", answers: viewModel.wrongAnswers))
-                ResultRowView(configuration: .init(title: "Risposte non date", titleColor: .yellow, systemImage: "questionmark.circle.fill", answers: viewModel.nonGivenAnswers))
+                ResultRowView(configuration: .init(title: "Risposte corrette", titleColor: .green, systemImage: "checkmark.circle.fill", answers: viewModel.correctAnswers, points: correctPoints))
+                ResultRowView(configuration: .init(title: "Risposte errate", titleColor: .red, systemImage: "multiply.circle.fill", answers: viewModel.wrongAnswers, points: wrongPoints))
+                ResultRowView(configuration: .init(title: "Risposte non date", titleColor: .yellow, systemImage: "questionmark.circle.fill", answers: viewModel.nonGivenAnswers, points: nonGivenPoints))
                 Spacer()
             }
             .foregroundColor(Color(uiColor: UIColor.secondarySystemBackground))
@@ -96,7 +108,7 @@ struct SmallStatView: View {
                 .frame(width: 15, height: 15)
                 .cornerRadius(5)
             label
-                .foregroundColor(Color(uiColor: .systemGray))
+                .foregroundColor(Color(uiColor: .secondaryLabel))
                 .font(.system(.body, design: .rounded).weight(.medium))
         }
     }
@@ -110,6 +122,7 @@ struct ResultRowView: View {
         var titleColor: Color
         var systemImage: String
         var answers: Questions
+        var points: Double
     }
 
     var body: some View {
@@ -129,9 +142,14 @@ struct ResultRowView: View {
                         }
                         .foregroundColor(configuration.titleColor)
                         Spacer()
-                        Text("\(configuration.answers.count)")
-                            .foregroundColor(Color(uiColor: .label))
-                            .font(.system(.title, design: .rounded).weight(.heavy))
+                        HStack(alignment: .firstTextBaseline, spacing: 14) {
+                            Text("\(configuration.answers.count)")
+                                .foregroundColor(Color(uiColor: .label))
+                                .font(.system(.title, design: .rounded).weight(.heavy))
+                            Text("\(configuration.points >= 0 ? "+" : "-")\(abs(configuration.points), specifier: "%.2f") punti")
+                                .foregroundColor(Color(uiColor: .tertiaryLabel))
+                                .font(.system(.title2, design: .rounded).weight(.bold))
+                        }
                     }
                     Spacer()
                     Image(systemName: "chevron.right")

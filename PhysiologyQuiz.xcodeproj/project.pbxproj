@@ -14,6 +14,10 @@
 		7A2A1154287F05A100E3EAEB /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A1153287F05A100E3EAEB /* Chart.swift */; };
 		7A2A1157287F5A1D00E3EAEB /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A1156287F5A1D00E3EAEB /* PrivacyPolicyView.swift */; };
 		7A45BF20287CB33100ADCF87 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45BF1F287CB33100ADCF87 /* InfoView.swift */; };
+		7A5D267E287FFDC10038AC67 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5D267D287FFDC10038AC67 /* Utils.swift */; };
+		7A5D268028800DC50038AC67 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5D267F28800DC50038AC67 /* CreditsView.swift */; };
+		7A5D26822880194F0038AC67 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5D26812880194F0038AC67 /* ActivityView.swift */; };
+		7A6F3EE6287FFC2900664173 /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F3EE5287FFC2900664173 /* LicenseView.swift */; };
 		7A94436F287DC8180021EE73 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94436E287DC8180021EE73 /* SettingsView.swift */; };
 		7A944374287DD0B20021EE73 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A944373287DD0B20021EE73 /* SettingsViewModel.swift */; };
 		7A9B1497287C23CE0001A16A /* PhysiologyQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B1496287C23CE0001A16A /* PhysiologyQuizApp.swift */; };
@@ -35,6 +39,10 @@
 		7A2A1153287F05A100E3EAEB /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		7A2A1156287F5A1D00E3EAEB /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		7A45BF1F287CB33100ADCF87 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		7A5D267D287FFDC10038AC67 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7A5D267F28800DC50038AC67 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		7A5D26812880194F0038AC67 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		7A6F3EE5287FFC2900664173 /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
 		7A94436E287DC8180021EE73 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7A944373287DD0B20021EE73 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		7A9B1493287C23CE0001A16A /* PhysiologyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysiologyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +89,9 @@
 			children = (
 				7A45BF1F287CB33100ADCF87 /* InfoView.swift */,
 				7A2A1156287F5A1D00E3EAEB /* PrivacyPolicyView.swift */,
+				7A6F3EE5287FFC2900664173 /* LicenseView.swift */,
+				7A5D267F28800DC50038AC67 /* CreditsView.swift */,
+				7A5D26812880194F0038AC67 /* ActivityView.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -102,6 +113,14 @@
 				7A9B14B4287C5FC70001A16A /* QuestionDetailView.swift */,
 			);
 			path = Questions;
+			sourceTree = "<group>";
+		};
+		7A5D267C287FFDB80038AC67 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7A5D267D287FFDC10038AC67 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7A944372287DCDCA0021EE73 /* AccessoryViews */ = {
@@ -132,6 +151,7 @@
 		7A9B1495287C23CE0001A16A /* PhysiologyQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				7A5D267C287FFDB80038AC67 /* Utils */,
 				7A9B14AA287C2DAD0001A16A /* Data */,
 				7A9B14A7287C27FD0001A16A /* ViewModels */,
 				7A9B14A6287C26E50001A16A /* Models */,
@@ -273,10 +293,14 @@
 				7A9B14B5287C5FC70001A16A /* QuestionDetailView.swift in Sources */,
 				7A9B14B1287C51980001A16A /* AllQuestionsView.swift in Sources */,
 				7A944374287DD0B20021EE73 /* SettingsViewModel.swift in Sources */,
+				7A5D267E287FFDC10038AC67 /* Utils.swift in Sources */,
 				7A2A1154287F05A100E3EAEB /* Chart.swift in Sources */,
+				7A6F3EE6287FFC2900664173 /* LicenseView.swift in Sources */,
+				7A5D26822880194F0038AC67 /* ActivityView.swift in Sources */,
 				7A283D81287EF2A5000E3157 /* ResultsListView.swift in Sources */,
 				7A1E5E4F287C630B00900AE0 /* QuizView.swift in Sources */,
 				7A94436F287DC8180021EE73 /* SettingsView.swift in Sources */,
+				7A5D268028800DC50038AC67 /* CreditsView.swift in Sources */,
 				7A9B1497287C23CE0001A16A /* PhysiologyQuizApp.swift in Sources */,
 				7A1E5E53287C69E400900AE0 /* AnswersSummaryView.swift in Sources */,
 			);
