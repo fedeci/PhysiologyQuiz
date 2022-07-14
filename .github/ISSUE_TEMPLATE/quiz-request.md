@@ -7,6 +7,6 @@ assignees: ''
 
 ---
 
-**Quiz(zes) to add to the application**
+**Quiz (one or more) to add to the application**
 
 **Additional information**
