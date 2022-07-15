@@ -4827,78 +4827,78 @@
         "details": "(160mmHg)",
         "answer": false,
         "question": "La pressione parziale di ossigeno nell'aria secca a livello del mare è 100mmHg"
+      }
+    ]
+  },
+  {
+    "name": "Biologia della cellula",
+    "questions": [{
+        "answer": false,
+        "question": "La membrana plasmatica è permeabile a soluti polari"
       },
       {
-        "name": "Biologia della cellula",
-        "questions": [{
-            "answer": false,
-            "question": "La membrana plasmatica è permeabile a soluti polari"
-          },
-          {
-            "answer": true,
-            "question": "I Procarioti sono organismi viventi privi di nucleo"
-          },
-          {
-            "answer": true,
-            "question": "I ribosomi associati al reticolo endoplasmatico rugoso sintetizzano nuove proteine, mentre l'apparato del Golgi è coinvolto nella loro maturazione"
-          },
-          {
-            "answer": false,
-            "question": "L'rRNA è organizzato a formare una struttura a trifoglio in cui parti del filamento si appaiano a formare porzioni a doppia elica"
-          },
-          {
-            "answer": true,
-            "question": "La DNA polimerasi consente una duplicazione del DNA di tipo semiconservativo"
-          },
-          {
-            "answer": true,
-            "question": "Le cellule della linea germinale sono aploidi cioè ciascun gene è presente in singola copia"
-          },
-          {
-            "answer": true,
-            "question": "I nucleosomi partecipano al compattamento del filamento di DNA"
-          },
-          {
-            "answer": true,
-            "question": "I vaccini sfruttano la capacità del sistema immunitario di sviluppare una memoria immunologica F Nel midollo spinale si ha produzione di cellule del sistema immunitario"
-          },
-          {
-            "answer": true,
-            "question": "I linfociti B producono immunoglobuline"
-          },
-          {
-            "answer": false,
-            "question": "Il potenziale d’azione neuronale può durare centinaia di millisecondi"
-          },
-          {
-            "answer": false,
-            "question": "In un neurone la resistenza di membrana è massima quando tutti i canali ionici sono aperti"
-          },
-          {
-            "answer": true,
-            "question": "In condizioni di [Na+] extracellulare < [Na+] intracellulare il potenziale di equilibrio del Na+ è negativo"
-          },
-          {
-            "answer": true,
-            "question": "Il potenziale soglia di membrana definisce il valore di potenziale di membrana in corrispondenza del quale si aprono i canali del sodio responsabili della genesi del potenziale d'azione"
-          },
-          {
-            "answer": false,
-            "question": "Attraverso i canali voltaggio dipendenti il flusso ionico avviene in maniera attiva (mediante consumo di ATP)"
-          },
-          {
-            "answer": true,
-            "question": "L'inattivazione dei canali del sodio assonali impedisce la propagazione retrograda del potenziale d'azione"
-          },
-          {
-            "answer": true,
-            "question": "Le pompe ioniche di membrana trasportano gli ioni attivamente, consumando cioè ATP secondo meccanismi di trasporto attivo primario o secondario"
-          },
-          {
-            "answer": false,
-            "question": "Il potenziale di membrana a riposo di una cellula eccitabile (inteso come differenza di potenziale ai capi della membrana, è garantito dall'attività della pompa sodio/calcio"
-          }
-        ]
+        "answer": true,
+        "question": "I Procarioti sono organismi viventi privi di nucleo"
+      },
+      {
+        "answer": true,
+        "question": "I ribosomi associati al reticolo endoplasmatico rugoso sintetizzano nuove proteine, mentre l'apparato del Golgi è coinvolto nella loro maturazione"
+      },
+      {
+        "answer": false,
+        "question": "L'rRNA è organizzato a formare una struttura a trifoglio in cui parti del filamento si appaiano a formare porzioni a doppia elica"
+      },
+      {
+        "answer": true,
+        "question": "La DNA polimerasi consente una duplicazione del DNA di tipo semiconservativo"
+      },
+      {
+        "answer": true,
+        "question": "Le cellule della linea germinale sono aploidi cioè ciascun gene è presente in singola copia"
+      },
+      {
+        "answer": true,
+        "question": "I nucleosomi partecipano al compattamento del filamento di DNA"
+      },
+      {
+        "answer": true,
+        "question": "I vaccini sfruttano la capacità del sistema immunitario di sviluppare una memoria immunologica F Nel midollo spinale si ha produzione di cellule del sistema immunitario"
+      },
+      {
+        "answer": true,
+        "question": "I linfociti B producono immunoglobuline"
+      },
+      {
+        "answer": false,
+        "question": "Il potenziale d’azione neuronale può durare centinaia di millisecondi"
+      },
+      {
+        "answer": false,
+        "question": "In un neurone la resistenza di membrana è massima quando tutti i canali ionici sono aperti"
+      },
+      {
+        "answer": true,
+        "question": "In condizioni di [Na+] extracellulare < [Na+] intracellulare il potenziale di equilibrio del Na+ è negativo"
+      },
+      {
+        "answer": true,
+        "question": "Il potenziale soglia di membrana definisce il valore di potenziale di membrana in corrispondenza del quale si aprono i canali del sodio responsabili della genesi del potenziale d'azione"
+      },
+      {
+        "answer": false,
+        "question": "Attraverso i canali voltaggio dipendenti il flusso ionico avviene in maniera attiva (mediante consumo di ATP)"
+      },
+      {
+        "answer": true,
+        "question": "L'inattivazione dei canali del sodio assonali impedisce la propagazione retrograda del potenziale d'azione"
+      },
+      {
+        "answer": true,
+        "question": "Le pompe ioniche di membrana trasportano gli ioni attivamente, consumando cioè ATP secondo meccanismi di trasporto attivo primario o secondario"
+      },
+      {
+        "answer": false,
+        "question": "Il potenziale di membrana a riposo di una cellula eccitabile (inteso come differenza di potenziale ai capi della membrana, è garantito dall'attività della pompa sodio/calcio"
       }
     ]
   }
