@@ -32,7 +32,8 @@ class FastlanePhysiologyQuizUITests: XCTestCase {
         app/*@START_MENU_TOKEN@*/.buttons["showResultsButton"]/*[[".buttons[\"Mostra punteggi\"]",".buttons[\"showResultsButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         snapshot("04QuizResultsScreen")
         app.navigationBars["Punteggi"]/*@START_MENU_TOKEN@*/.buttons["closeButton"]/*[[".buttons[\"Fine\"]",".buttons[\"closeButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        ttgc7swiftui19uihostingNavigationBar.buttons["Quiz fisiologia"].tap()
+        ttgc7swiftui19uihostingNavigationBar.buttons["exitButton"].tap()
+        app.alerts["Uscire dal quiz?"].scrollViews.otherElements.buttons["yesAlertButton"].tap()
         app.navigationBars["Quiz fisiologia"]/*@START_MENU_TOKEN@*/.buttons["allQuestionsButton"]/*[[".buttons[\"Elenco\"]",".buttons[\"allQuestionsButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         snapshot("05QuizzesScreen")
     }

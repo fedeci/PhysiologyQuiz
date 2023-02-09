@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct QuizView: View {
+    @Environment(\.dismiss) private var dismiss
     @State private var isShowingResults: Bool = false
     @State private var isShowingResultsSheet: Bool = false
+    @State private var showDismissAlert: Bool = false
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
@@ -41,12 +43,12 @@ struct QuizView: View {
                                 : .clear
                             )
                             .bold()
-
+                        
                     }
                 }
-                    .disabled(!isShowingResults)
-                    .accessibilityAddTraits([.isButton])
-                    .accessibilityIdentifier("showResultsButton")
+                .disabled(!isShowingResults)
+                .accessibilityAddTraits([.isButton])
+                .accessibilityIdentifier("showResultsButton")
                 HStack {
                     Button {
                         viewModel.answerQuestionAt(value: false)
@@ -71,9 +73,9 @@ struct QuizView: View {
                                 .frame(width: 24, height: 24)
                         }
                     }
-                        .disabled(isShowingResults)
-                        .accessibilityAddTraits([.isButton])
-                        .accessibilityIdentifier("falseButton")
+                    .disabled(isShowingResults)
+                    .accessibilityAddTraits([.isButton])
+                    .accessibilityIdentifier("falseButton")
                     Spacer()
                     Button {
                         viewModel.answerQuestionAt(value: true)
@@ -98,9 +100,9 @@ struct QuizView: View {
                                 .frame(width: 24, height: 24)
                         }
                     }
-                        .disabled(isShowingResults)
-                        .accessibilityAddTraits([.isButton])
-                        .accessibilityIdentifier("trueButton")
+                    .disabled(isShowingResults)
+                    .accessibilityAddTraits([.isButton])
+                    .accessibilityIdentifier("trueButton")
                 }
                 .padding(.top)
             }
@@ -115,21 +117,41 @@ struct QuizView: View {
             .padding()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showDismissAlert = true
+                    } label: {
+                        Image(systemName: "arrow.uturn.backward")
+                    }
+                    .accessibilityAddTraits([.isButton])
+                    .accessibilityIdentifier("exitButton")
+                }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Text("\(viewModel.counter + 1) / \(viewModel.settings.numberOfQuestions)")
                         .bold()
                     Button {
-                        isShowingResults ? viewModel.resetQuiz() : print("show solutions here")
+                        isShowingResults ? viewModel.resetQuiz() : nil
                         isShowingResults.toggle()
                     } label: {
-                        Image(systemName: isShowingResults ? "arrow.counterclockwise.circle.fill" : "forward.end.fill")
+                        Image(systemName: isShowingResults ? "arrow.counterclockwise.circle.fill" : "checkmark.circle.fill")
                     }
-                        .accessibilityAddTraits([.isButton])
-                        .accessibilityIdentifier(isShowingResults ? "restartButton" : "submitButton")
+                    .accessibilityAddTraits([.isButton])
+                    .accessibilityIdentifier(isShowingResults ? "restartButton" : "submitButton")
                 }
             }
             .sheet(isPresented: $isShowingResultsSheet) {
                 ResultsView(isShowingSheet: $isShowingResultsSheet, viewModel: viewModel)
+            }
+            .navigationBarBackButtonHidden(true)
+            .alert("Uscire dal quiz?", isPresented: $showDismissAlert) {
+                Button("Sì", role: .destructive) {
+                    dismiss()
+                }
+                .accessibilityIdentifier("yesAlertButton")
+                Button("No", role: .cancel) {
+                    showDismissAlert = false
+                }
+                .accessibilityIdentifier("noAlertButton")
             }
         }
     }

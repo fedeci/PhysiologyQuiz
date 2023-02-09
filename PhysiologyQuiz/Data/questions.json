@@ -4901,5 +4901,253 @@
         "question": "Il potenziale di membrana a riposo di una cellula eccitabile (inteso come differenza di potenziale ai capi della membrana, è garantito dall'attività della pompa sodio/calcio"
       }
     ]
+  },
+  {
+    "name": "Tema d'esame Febbraio 2022",
+    "questions": [
+        {
+          "answer": true,
+          "question": "La forza sviluppata da un muscolo dipende da il numero di unità motorie reclutate"
+        },
+        {
+          "answer": true,
+          "question": "La forza sviluppata da un muscolo dipende dalla frequenza (numero di potenziali d'azione al secondo)"
+        },
+        {
+          "answer": false,
+          "question": "La forza sviluppata da un muscolo dipende dallo stato di attivazione del sistema parasimpatico"
+        },
+        {
+          "answer": true,
+          "question": "La forza sviluppata da un muscolo dipende dalla concentrazione di calcio reggiunta a livello intracellulare"
+        },
+        {
+          "answer": true,
+          "question": "All'aumentare del volume del polmone la sua complianza tende a diminuire"
+        },
+        {
+          "answer": false,
+          "question": "La pressione parziale dell'ossigeno nell'aria alveolare è circa 40 mmHg"
+        },
+        {
+          "answer": false,
+          "question": "La saturazione dell'emoglobina nel sangue venoso (misto) è circa pari a 40%"
+        },
+        {
+          "answer": false,
+          "question": "la pressione parziale di ossigeno all'interno di una cellula è generalmente maggiore che nel liquido interstiziale"
+        },
+        {
+          "answer": false,
+          "question": "Il gomito si trova distale rispetto al polso"
+        },
+        {
+          "answer": false,
+          "question": "L'arteria femorale visualizzata secondo un piano frontale presenta una forma circolare"
+        },
+        {
+          "answer": true,
+          "question": "La vasocostrizione del distretto arteriolare può causare la riduzione di pressione nel distretto capillare"
+        },
+        {
+          "answer": false,
+          "question": "La riduzione di pressione nel distretto capillare può causare l'aumento della filtrazione capillare"
+        },
+        {
+          "answer": false,
+          "question": "Un elastico stretto intorno ad un braccio può causare edema a livello della spalla"
+        },
+        {
+          "answer": true,
+          "question": "Un aumento di metabolismo in un tessuto può causare localmente dilatazione arteriolare"
+        },
+        {
+          "answer": false,
+          "question": "L'attivazione simpatica stimola la vasocostrizione delle arteriole e la dilatazione delle vene"
+        },
+        {
+          "answer": true,
+          "question": "Nell'attività normale del cuore il nodo atrio-ventricolare si eccita ad una frequenza pari a quella del nodo seno atriale"
+        },
+        {
+          "answer": true,
+          "question": "Nel cuore le cellule cardiache sono connesse tra loro da sinapsi elettriche che permettono la propagazione dell'eccitazione elettrica direttamente da cellula a cellula"
+        },
+        {
+          "answer": false,
+          "question": "Nel cuore la sistole ventricolare si sviluppa tra l'onda T e l'onda P dell'elettrocardiogramma"
+        },
+        {
+          "answer": true,
+          "question": "Nel cuore la gittata sistolica vale circa 70 ml"
+        },
+        {
+          "answer": false,
+          "question": "Nel cuore l'apertura della valvola atrio-ventricolare avviene verso la fine della sistole atriale"
+        },
+        {
+          "answer": true,
+          "question": "Nel cuore la contrazione dei ventricoli inizia con una fase \"isovolumetrica\""
+        },
+        {
+          "answer": false,
+          "question": "Nel cuore la massima pressione ventricolare è raggiunta nell'intervallo P-Q dell'elettrocardiogramma"
+        },
+        {
+          "answer": true,
+          "question": "La produzione di renina avviene nel rene"
+        },
+        {
+          "answer": false,
+          "question": "La produzione di renina è stimolata da un aumento di pressione"
+        },
+        {
+          "answer": false,
+          "question": "La produzione di renina facilita la diuresi"
+        },
+        {
+          "answer": true,
+          "question": "La produzione di renina è influenzata da variazioni della velocità di filtrazione glomerulare"
+        },
+        {
+          "answer": false,
+          "question": "Una condizione di acidosi metabolica stimola un aumento della escrezione di HCO3- nelle urine"
+        },
+        {
+          "answer": false,
+          "question": "Una condizione di acidosi metabolica può essere provocata da una patologia ostruttiva delle vie respiratorie"
+        },
+        {
+          "answer": false,
+          "question": "Una condizione di acidosi metabolica è caratterizzata da un eccesso di CO2 nel sangue"
+        },
+        {
+          "answer": false,
+          "question": "Una condizione di acidosi metabolica è la condizione che si verifica quando l'organismo viene portato in alta quota"
+        },
+        {
+            "answer": false,
+            "question": "I filamenti del DNA sono paralleli, cioè con polarità uguali 3'-5' e 3'-5'"
+        },
+        {
+            "answer": false,
+            "question": "La trascrizione dell'RNA è un fenomeno che avviene a livello del citoplasma"
+        },
+        {
+            "answer": true,
+            "question": "Nello splicing del mRNA gli introni vengono rimossi"
+        },
+        {
+            "answer": false,
+            "question": "Una tripletta di nucleotidi codifica per un solo aminoacido",
+            "details": "Una tripletta ordinata codifica per un solo amminoacido, ma se cambiamo l'ordine degli stessi tre nucleotidi otteniamo altri aminoacidi"
+        },
+        {
+            "answer": true,
+            "question": "La variabilità genica dei gameti è garantita dal fenomeno della ricombinazione genica (crossing over) e dal processo di riassortimento meiotico"
+        },
+        {
+            "answer": true,
+            "question": "Il processo di sintesi proteica avviene a livello ribosomi"
+        },
+        {
+            "answer": true,
+            "question": "La sintesi di DNA e un processo semiconservativo"
+        },
+        {
+            "answer": false,
+            "question": "Le cellule della linea germinale devono necessariamente essere aploidi"
+        },
+        {
+            "answer": false,
+            "question": "(Immunitario) Il sistema del complemento rappresenta un meccanismo di difesa cellulare specifico"
+        },
+        {
+            "answer": false,
+            "question": "(Immunitario) Le immunoglobuline sono dei carboidrati",
+            "details": "Sono proteine"
+        },
+        {
+            "answer": true,
+            "question": "(Eccitabilità cellulare) Un bloccante selettivo dei canali del K+ prolunga la durata del potenziale d'azione"
+        },
+        {
+            "answer": true,
+            "question": "(Eccitabilità cellulare) In condizioni di [K+]o = [K+]i il potenziale di equilibrio del K+ è uguale a 0 mV"
+        },
+        {
+            "answer": true,
+            "question": "(Eccitabilità cellulare) Un blocco della pompa Na+/K+ causa a livello intracellulare accumulo di Na+ e diminuzione di K+"
+        },
+        {
+            "answer": true,
+            "question": "(Eccitabilità cellulare) La conduttanza di membrana è associata alla presenza di fosfolipidi di membrana"
+        },
+        {
+            "answer": false,
+            "question": "(Eccitabilità cellulare) In un neurone. l'attivazione dei canali del Na+ è responsabile della fase di ripolarizzazione del potenziale d'azione"
+        },
+        {
+            "answer": false,
+            "question": "(Eccitabilità cellulare) In un neurone a riposo il numero dei canali del Na+ aperti è alto mentre quello dei canali del K+ aperti è basso"
+        },
+        {
+            "answer": false,
+            "question": "(Eccitabilità cellulare) La conduzione \"saltatoria\" del potenziale d'azione avviene sia nelle fibre mielinizzate sia in guelle non mielinizzate"
+        },
+        {
+            "answer": false,
+            "question": "(Sistema nervoso) I recettori adrenergici sono recettori ionotropi"
+        },
+        {
+            "answer": true,
+            "question": "(Sistema nervoso) La velocità di propagazione del potenziale d'azione è direttamente proporzionale al diametro della fibra"
+        },
+        {
+            "answer": true,
+            "question": "(Sistema nervoso) Un potenziale post sinaptico inibitorio è una variazione transiente del potenziale di membrana verso valori più negativi del potenziale di riposo"
+        },
+        {
+            "answer": false,
+            "question": "(Sistema nervoso) Le sinapsi chimiche consentono di trasferire informazioni in modo bidirezionale"
+        },
+        {
+            "answer": false,
+            "question": "(Sistema nervoso) Nella trasmissione sinaptica, la fusione vescicolare inizia quando il Ca2+ pre-sinaptico diminuisce"
+        },
+        {
+            "answer": false,
+            "question": "(Sistema nervoso) Il recettore per il GABA è un canale ionico, selettivo per il Na+",
+            "details": "Selettivo per il Cl-"
+        },
+        {
+            "answer": false,
+            "question": "(Sistema nervoso) Un neurotrasmettitore può causare eccitazione chiudendo un canale del K+"
+        },
+        {
+            "answer": true,
+            "question": "(Endocrino) Il digiuno stimola la secrezione di glucagone"
+        },
+        {
+            "answer": true,
+            "question": "(Endocrino) Le fibre del sistema nervoso simpatico pregangliari colinergiche innervano le cellule cromaffini (midollare del surrene)"
+        },
+        {
+            "answer": true,
+            "question": "(Endocrino) La funzionalità dell'ipofisi è sotto il controllo dell'ipotalamo"
+        },
+        {
+            "answer": false,
+            "question": "(Gastrointestinale) I sali biliari hanno un ruolo fondamentale nella digestione delle proteine"
+        },
+        {
+            "answer": false,
+            "question": "(Gastrointestinale) L'assorbimento degli alimenti avviene soprattutto nello stomaco"
+        },
+        {
+            "answer": true,
+            "question": "(Gastrointestinale) Il pancreas esocrino è fondamentale per la digestione dei lipidi"
+        },
+    ]
   }
 ]

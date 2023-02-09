@@ -1,7 +1,7 @@
 ## Setting up the project on a new machine
 
 - `git clone` the project.
-- (optional) Run `bundle install` in the terminal in the cloned project directory.
+- (optional) Run `make bootstrap` in the terminal in the cloned project directory to setup dependencies.
 
 ## Publishing
 

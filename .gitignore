@@ -2,3 +2,4 @@
 xcuserdata/
 fastlane/report.xml
 screenshots
+node_modules/

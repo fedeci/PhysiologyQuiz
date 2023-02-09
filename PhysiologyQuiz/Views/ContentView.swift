@@ -76,6 +76,7 @@ struct ContentView: View {
                 AllQuestionsView(isShowingQuestions: $isShowingQuestions, viewModel: viewModel)
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 
