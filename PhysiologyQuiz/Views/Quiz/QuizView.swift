@@ -13,6 +13,7 @@ struct QuizView: View {
     @State private var isShowingResultsSheet: Bool = false
     @State private var showDismissAlert: Bool = false
     @ObservedObject var viewModel: ViewModel
+    @ObservedObject var appStoreViewModel: AppStoreViewModel
 
     var body: some View {
         VStack {
@@ -130,7 +131,11 @@ struct QuizView: View {
                     Text("\(viewModel.counter + 1) / \(viewModel.settings.numberOfQuestions)")
                         .bold()
                     Button {
-                        isShowingResults ? viewModel.resetQuiz() : nil
+                        if isShowingResults {
+                            viewModel.resetQuiz()
+                        } else if !appStoreViewModel.didRemoveAds {
+                            InterstitialAd.shared.present()
+                        }
                         isShowingResults.toggle()
                     } label: {
                         Image(systemName: isShowingResults ? "arrow.counterclockwise.circle.fill" : "checkmark.circle.fill")
@@ -142,7 +147,7 @@ struct QuizView: View {
             .sheet(isPresented: $isShowingResultsSheet) {
                 ResultsView(isShowingSheet: $isShowingResultsSheet, viewModel: viewModel)
             }
-            .navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden()
             .alert("Uscire dal quiz?", isPresented: $showDismissAlert) {
                 Button("Sì", role: .destructive) {
                     dismiss()
@@ -159,6 +164,6 @@ struct QuizView: View {
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView(viewModel: ViewModel("questions", "json"))
+        QuizView(viewModel: ViewModel("questions", "json"), appStoreViewModel: AppStoreViewModel())
     }
 }

@@ -53,6 +53,10 @@ class ViewModel: ObservableObject {
         load(filename, `extension`)
         resetQuiz()
     }
+    
+    deinit {
+        anyCancellable?.cancel()
+    }
 
     func load(_ filename: String, _ `extension`: String) {
 

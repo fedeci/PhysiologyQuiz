@@ -13,7 +13,10 @@
 		7A283D81287EF2A5000E3157 /* ResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A283D80287EF2A5000E3157 /* ResultsListView.swift */; };
 		7A2A1154287F05A100E3EAEB /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A1153287F05A100E3EAEB /* Chart.swift */; };
 		7A2A1157287F5A1D00E3EAEB /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A1156287F5A1D00E3EAEB /* PrivacyPolicyView.swift */; };
+		7A3D42402ACCB73400201906 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 7A3D423F2ACCB73400201906 /* GoogleMobileAds */; };
+		7A43BD192ACDA630004C03ED /* InterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43BD182ACDA630004C03ED /* InterstitialAd.swift */; };
 		7A45BF20287CB33100ADCF87 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45BF1F287CB33100ADCF87 /* InfoView.swift */; };
+		7A4A4CD12ACDEBCF00D88970 /* AppStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4A4CD02ACDEBCF00D88970 /* AppStoreViewModel.swift */; };
 		7A5143AE288076C20062C84E /* FastlanePhysiologyQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5143AD288076C20062C84E /* FastlanePhysiologyQuizUITests.swift */; };
 		7A5143B72880779F0062C84E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5143B62880779F0062C84E /* SnapshotHelper.swift */; };
 		7A5D267E287FFDC10038AC67 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5D267D287FFDC10038AC67 /* Utils.swift */; };
@@ -31,6 +34,7 @@
 		7A9B14AC287C2DC40001A16A /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B14AB287C2DC40001A16A /* questions.json */; };
 		7A9B14B1287C51980001A16A /* AllQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B14B0287C51980001A16A /* AllQuestionsView.swift */; };
 		7A9B14B5287C5FC70001A16A /* QuestionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B14B4287C5FC70001A16A /* QuestionDetailView.swift */; };
+		7AE087DB299520DD00000815 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE087DA299520DD00000815 /* TestUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +54,10 @@
 		7A283D80287EF2A5000E3157 /* ResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListView.swift; sourceTree = "<group>"; };
 		7A2A1153287F05A100E3EAEB /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		7A2A1156287F5A1D00E3EAEB /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		7A43BD182ACDA630004C03ED /* InterstitialAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAd.swift; sourceTree = "<group>"; };
 		7A45BF1F287CB33100ADCF87 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		7A4A4CCF2ACDE97700D88970 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
+		7A4A4CD02ACDEBCF00D88970 /* AppStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreViewModel.swift; sourceTree = "<group>"; };
 		7A5143AB288076C20062C84E /* FastlanePhysiologyQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastlanePhysiologyQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5143AD288076C20062C84E /* FastlanePhysiologyQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlanePhysiologyQuizUITests.swift; sourceTree = "<group>"; };
 		7A5143B62880779F0062C84E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
@@ -70,6 +77,7 @@
 		7A9B14AB287C2DC40001A16A /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		7A9B14B0287C51980001A16A /* AllQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuestionsView.swift; sourceTree = "<group>"; };
 		7A9B14B4287C5FC70001A16A /* QuestionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailView.swift; sourceTree = "<group>"; };
+		7AE087DA299520DD00000815 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3D42402ACCB73400201906 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +127,14 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		7A43BD172ACDA621004C03ED /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				7A43BD182ACDA630004C03ED /* InterstitialAd.swift */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
 		7A45BF21287CB3E200ADCF87 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +159,7 @@
 			children = (
 				7A5143B62880779F0062C84E /* SnapshotHelper.swift */,
 				7A5143AD288076C20062C84E /* FastlanePhysiologyQuizUITests.swift */,
+				7AE087DA299520DD00000815 /* TestUtils.swift */,
 			);
 			path = FastlanePhysiologyQuizUITests;
 			sourceTree = "<group>";
@@ -184,6 +202,7 @@
 		7A9B1495287C23CE0001A16A /* PhysiologyQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				7A43BD172ACDA621004C03ED /* Ads */,
 				7A5D267C287FFDB80038AC67 /* Utils */,
 				7A9B14AA287C2DAD0001A16A /* Data */,
 				7A9B14A7287C27FD0001A16A /* ViewModels */,
@@ -192,6 +211,7 @@
 				7A9B1496287C23CE0001A16A /* PhysiologyQuizApp.swift */,
 				7A9B149A287C23CF0001A16A /* Assets.xcassets */,
 				7A9B149C287C23CF0001A16A /* Preview Content */,
+				7A4A4CCF2ACDE97700D88970 /* Products.storekit */,
 			);
 			path = PhysiologyQuiz;
 			sourceTree = "<group>";
@@ -216,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				7A9B14A8287C280E0001A16A /* ViewModel.swift */,
+				7A4A4CD02ACDEBCF00D88970 /* AppStoreViewModel.swift */,
 				7A944373287DD0B20021EE73 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
@@ -277,6 +298,7 @@
 			);
 			name = PhysiologyQuiz;
 			packageProductDependencies = (
+				7A3D423F2ACCB73400201906 /* GoogleMobileAds */,
 			);
 			productName = PhysiologyQuiz;
 			productReference = 7A9B1493287C23CE0001A16A /* PhysiologyQuiz.app */;
@@ -311,6 +333,7 @@
 			);
 			mainGroup = 7A9B148A287C23CE0001A16A;
 			packageReferences = (
+				7A3D423E2ACCB73400201906 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 7A9B1494287C23CE0001A16A /* Products */;
 			projectDirPath = "";
@@ -348,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5143AE288076C20062C84E /* FastlanePhysiologyQuizUITests.swift in Sources */,
+				7AE087DB299520DD00000815 /* TestUtils.swift in Sources */,
 				7A5143B72880779F0062C84E /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,10 +391,12 @@
 				7A944374287DD0B20021EE73 /* SettingsViewModel.swift in Sources */,
 				7A5D267E287FFDC10038AC67 /* Utils.swift in Sources */,
 				7A2A1154287F05A100E3EAEB /* Chart.swift in Sources */,
+				7A4A4CD12ACDEBCF00D88970 /* AppStoreViewModel.swift in Sources */,
 				7A6F3EE6287FFC2900664173 /* LicenseView.swift in Sources */,
 				7A5D26822880194F0038AC67 /* ActivityView.swift in Sources */,
 				7A283D81287EF2A5000E3157 /* ResultsListView.swift in Sources */,
 				7A1E5E4F287C630B00900AE0 /* QuizView.swift in Sources */,
+				7A43BD192ACDA630004C03ED /* InterstitialAd.swift in Sources */,
 				7A94436F287DC8180021EE73 /* SettingsView.swift in Sources */,
 				7A5D268028800DC50038AC67 /* CreditsView.swift in Sources */,
 				7A9B1497287C23CE0001A16A /* PhysiologyQuizApp.swift in Sources */,
@@ -552,6 +578,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhysiologyQuiz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Quiz Fisiologia";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Mostrare annunci personalizzati";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
@@ -563,6 +590,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.federicociardi.PhysiologyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -587,6 +615,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhysiologyQuiz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Quiz Fisiologia";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Mostrare annunci personalizzati";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
@@ -598,6 +627,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.federicociardi.PhysiologyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -640,6 +670,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A3D423E2ACCB73400201906 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A3D423F2ACCB73400201906 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A3D423E2ACCB73400201906 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A9B148B287C23CE0001A16A /* Project object */;
 }

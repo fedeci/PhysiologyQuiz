@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var appStoreViewModel = AppStoreViewModel()
     @StateObject var viewModel = ViewModel("questions", "json")
     @State private var isShowingInfo = false
     @State private var isShowingQuestions = false
@@ -23,7 +24,7 @@ struct ContentView: View {
                 Spacer()
                 VStack {
                     NavigationLink {
-                        QuizView(viewModel: viewModel)
+                        QuizView(viewModel: viewModel, appStoreViewModel: appStoreViewModel)
                     } label: {
                         ZStack {
                             Rectangle()
@@ -53,7 +54,7 @@ struct ContentView: View {
                     }
                 
                     NavigationLink {
-                        SettingsView(viewModel: viewModel)
+                        SettingsView(viewModel: viewModel, appStoreViewModel: appStoreViewModel)
                     } label: {
                         Image(systemName: "gearshape.fill")
                     }
