@@ -13,7 +13,7 @@ struct QuizView: View {
     @State private var isShowingResultsSheet: Bool = false
     @State private var showDismissAlert: Bool = false
     @ObservedObject var viewModel: ViewModel
-    @ObservedObject var appStoreViewModel: AppStoreViewModel
+    @EnvironmentObject var appStore: AppStoreViewModel
 
     var body: some View {
         VStack {
@@ -133,7 +133,7 @@ struct QuizView: View {
                     Button {
                         if isShowingResults {
                             viewModel.resetQuiz()
-                        } else if !appStoreViewModel.didRemoveAds {
+                        } else if !appStore.didRemoveAds {
                             InterstitialAd.shared.present()
                         }
                         isShowingResults.toggle()
@@ -164,6 +164,7 @@ struct QuizView: View {
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView(viewModel: ViewModel("questions", "json"), appStoreViewModel: AppStoreViewModel())
+        QuizView(viewModel: ViewModel("questions", "json"))
+            .environmentObject(AppStoreViewModel())
     }
 }

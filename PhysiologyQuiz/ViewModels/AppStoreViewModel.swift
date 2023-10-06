@@ -22,16 +22,16 @@ final class AppStoreViewModel: ObservableObject {
     
     init() {
         updateListenerTask = listenForTransactions()
-        
-        Task {
-            await requestProducts()
-            
-            await updateCustomerProductStatus()
-        }
     }
     
     deinit {
         updateListenerTask?.cancel()
+    }
+
+    func initializeStore() async {
+        await requestProducts()
+        
+        await updateCustomerProductStatus()
     }
     
     private func listenForTransactions() -> Task<Void, Error> {
@@ -54,7 +54,7 @@ final class AppStoreViewModel: ObservableObject {
     }
     
     @MainActor
-    private func updateCustomerProductStatus() async {
+    func updateCustomerProductStatus() async {
         var didRemoveAds = false
 
         for await result in Transaction.currentEntitlements {
@@ -64,12 +64,14 @@ final class AppStoreViewModel: ObservableObject {
                 if transaction.productID == REMOVE_ADS_PRODUCT_ID {
                     didRemoveAds = true
                 }
+
             } catch { }
         }
         
         self.didRemoveAds = didRemoveAds
     }
     
+    @discardableResult
     func purchaseAdRemoval() async throws -> Transaction? {
         let result = try await adRemovalProduct?.purchase()
         
@@ -89,7 +91,7 @@ final class AppStoreViewModel: ObservableObject {
         }
     }
     
-    func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
+    private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         //Check whether the JWS passes StoreKit verification.
         switch result {
         case .unverified:

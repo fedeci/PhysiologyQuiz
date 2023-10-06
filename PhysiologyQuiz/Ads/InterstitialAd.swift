@@ -20,12 +20,7 @@ final class InterstitialAd: NSObject, GADFullScreenContentDelegate {
 
     var interstitialAd: GADInterstitialAd?
     
-    override init() {
-        super.init()
-        loadInterstitial()
-    }
-    
-    private func loadInterstitial() {
+    func loadInterstitial() {
         let request = GADRequest()
         GADInterstitialAd.load(withAdUnitID: adUnitID,
                                request: request,
@@ -39,6 +34,7 @@ final class InterstitialAd: NSObject, GADFullScreenContentDelegate {
         })
     }
     
+    @MainActor
     func present() {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let root = windowScene.windows.first?.rootViewController else { return }
         interstitialAd?.present(fromRootViewController: root)

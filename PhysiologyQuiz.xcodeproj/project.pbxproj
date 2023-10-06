@@ -23,6 +23,7 @@
 		7A5D268028800DC50038AC67 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5D267F28800DC50038AC67 /* CreditsView.swift */; };
 		7A5D26822880194F0038AC67 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5D26812880194F0038AC67 /* ActivityView.swift */; };
 		7A6F3EE6287FFC2900664173 /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F3EE5287FFC2900664173 /* LicenseView.swift */; };
+		7A7C4A372ACF286B00CB93D6 /* GoogleUserMessagingPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 7A7C4A362ACF286B00CB93D6 /* GoogleUserMessagingPlatform */; };
 		7A94436F287DC8180021EE73 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94436E287DC8180021EE73 /* SettingsView.swift */; };
 		7A944374287DD0B20021EE73 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A944373287DD0B20021EE73 /* SettingsViewModel.swift */; };
 		7A9B1497287C23CE0001A16A /* PhysiologyQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B1496287C23CE0001A16A /* PhysiologyQuizApp.swift */; };
@@ -92,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7C4A372ACF286B00CB93D6 /* GoogleUserMessagingPlatform in Frameworks */,
 				7A3D42402ACCB73400201906 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +301,7 @@
 			name = PhysiologyQuiz;
 			packageProductDependencies = (
 				7A3D423F2ACCB73400201906 /* GoogleMobileAds */,
+				7A7C4A362ACF286B00CB93D6 /* GoogleUserMessagingPlatform */,
 			);
 			productName = PhysiologyQuiz;
 			productReference = 7A9B1493287C23CE0001A16A /* PhysiologyQuiz.app */;
@@ -334,6 +337,7 @@
 			mainGroup = 7A9B148A287C23CE0001A16A;
 			packageReferences = (
 				7A3D423E2ACCB73400201906 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				7A7C4A352ACF286B00CB93D6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */,
 			);
 			productRefGroup = 7A9B1494287C23CE0001A16A /* Products */;
 			projectDirPath = "";
@@ -680,6 +684,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		7A7C4A352ACF286B00CB93D6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-user-messaging-platform";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -687,6 +699,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A3D423E2ACCB73400201906 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
+		};
+		7A7C4A362ACF286B00CB93D6 /* GoogleUserMessagingPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A7C4A352ACF286B00CB93D6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */;
+			productName = GoogleUserMessagingPlatform;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

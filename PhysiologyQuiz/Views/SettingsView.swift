@@ -7,6 +7,7 @@
 
 import SwiftUI
 import StoreKit
+import UserMessagingPlatform
 
 struct PillButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -21,8 +22,9 @@ struct PillButtonStyle: ButtonStyle {
 }
 
 struct SettingsView: View {
+    @State private var isBuyingAdRemoval = false
     @ObservedObject var viewModel: ViewModel
-    @ObservedObject var appStoreViewModel: AppStoreViewModel
+    @EnvironmentObject var appStore: AppStoreViewModel
     
     var body: some View {
         List {
@@ -43,43 +45,77 @@ struct SettingsView: View {
                 }
             }
             
-            if let adRemovalProduct = appStoreViewModel.adRemovalProduct {
-                    if !appStoreViewModel.didRemoveAds {
-                        Section {
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text("Rimuovi pubblicità")
-                                        .font(.title2)
-                                        .fontWeight(.medium)
-                                    Spacer()
-                                    Button(adRemovalProduct.displayPrice) {
-                                        Task {
-                                            try await appStoreViewModel.purchaseAdRemoval()
+            if let adRemovalProduct = appStore.adRemovalProduct {
+                if !appStore.didRemoveAds {
+                    Section {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("Rimuovi pubblicità")
+                                    .font(.title2)
+                                    .fontWeight(.medium)
+                                Spacer()
+                                Button {
+                                    Task {
+                                        isBuyingAdRemoval = true
+                                        try await appStore.purchaseAdRemoval()
+                                        isBuyingAdRemoval = false
+                                    }
+                                } label: {
+                                    ZStack {
+                                        Text(adRemovalProduct.displayPrice)
+                                            .foregroundStyle(isBuyingAdRemoval ? .clear : .white)
+                                        if isBuyingAdRemoval {
+                                            ProgressView()
+                                                .progressViewStyle(.circular)
+                                                .environment(\.colorScheme, .dark)
                                         }
                                     }
-                                    .buttonStyle(PillButtonStyle())
                                 }
-                                Text("Rimuove tutte le pubblicità dall'app e supporta lo sviluppatore 🥳❤️")
-                                    .font(.callout)
-                                    .foregroundStyle(.secondary)
-                                    .padding(.top, 2)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 5)
+                                .background(Color.blue)
+                                .font(.body.bold())
+                                .clipShape(Capsule())
+                                .buttonStyle(BorderlessButtonStyle())
+                                .disabled(isBuyingAdRemoval)
                             }
-                            Button("Ripristina acquisto") {
-                                SKPaymentQueue.default().restoreCompletedTransactions()
+                            Text("Rimuove tutte le pubblicità dall'app e supporta lo sviluppatore 🥳❤️")
+                                .font(.callout)
+                                .foregroundStyle(.secondary)
+                                .padding(.top, 2)
+                        }
+                        Button("Ripristina acquisto") {
+                            Task {
+                                await appStore.updateCustomerProductStatus()
                             }
                         }
-                    } else {
-                        Section {
-                            HStack {
-                                Text("Pubblicità rimosse")
-                                    .fontWeight(.medium)
-                                Image(systemName: "checkmark.circle")
-                                    .foregroundStyle(.green, .green.opacity(0.65))
-                                    .font(.title2)
-                            }
+                        .disabled(isBuyingAdRemoval)
+                    }
+                } else {
+                    Section {
+                        HStack {
+                            Text("Pubblicità rimosse")
+                                .fontWeight(.medium)
+                            Image(systemName: "checkmark.circle")
+                                .foregroundStyle(.green, .green.opacity(0.65))
+                                .font(.title2)
                         }
                     }
                 }
+            }
+            
+            if UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus != .notRequired || appStore.didRemoveAds {
+                Section {
+                    Button("Gestisci consensi di Google AdMob") {
+                        guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                              let root = scene.windows.first?.rootViewController
+                        else { return }
+                        Task {
+                            try await UMPConsentForm.presentPrivacyOptionsForm(from: root)
+                        }
+                    }
+                }
+            }
         }
         .navigationTitle(Text("Impostazioni"))
     }
@@ -87,6 +123,7 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(viewModel: ViewModel("questions", "json"), appStoreViewModel: AppStoreViewModel())
+        SettingsView(viewModel: ViewModel("questions", "json"))
+            .environmentObject(AppStoreViewModel())
     }
 }

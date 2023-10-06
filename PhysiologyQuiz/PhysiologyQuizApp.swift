@@ -8,25 +8,55 @@
 import SwiftUI
 import AppTrackingTransparency
 import GoogleMobileAds
+import UserMessagingPlatform
 
 @main
 struct PhysiologyQuizApp: App {
-    var updates: Task<Void, Never>? = nil
+    @StateObject private var appStore = AppStoreViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didFinishLaunchingNotification)) { _ in
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
                     Task {
-                        await tryLoadAds()
+                        await loadAds()
                     }
                 }
+                .environmentObject(appStore)
         }
     }
     
-    private func tryLoadAds() async {
-        await ATTrackingManager.requestTrackingAuthorization()
+    @MainActor
+    private func requestUserConsent(from controller: UIViewController) async throws {
+        let parameters = UMPRequestParameters()
+//        #if DEBUG
+//        let debugSettings = UMPDebugSettings()
+//        debugSettings.geography = .EEA
+//        parameters.debugSettings = debugSettings
+//        UMPConsentInformation.sharedInstance.reset()
+//        #endif
 
-        await GADMobileAds.sharedInstance().start()
+        try await UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters)
+
+        try await UMPConsentForm.loadAndPresentIfRequired(from: controller)
+    }
+    
+    @MainActor
+    private func loadAds() async {
+        await appStore.initializeStore()
+        
+        if !appStore.didRemoveAds {
+            await ATTrackingManager.requestTrackingAuthorization()
+            
+            guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let root = scene.windows.first?.rootViewController else { return }
+            
+            try? await requestUserConsent(from: root)
+            
+            if UMPConsentInformation.sharedInstance.canRequestAds {
+                await GADMobileAds.sharedInstance().start()
+                
+                InterstitialAd.shared.loadInterstitial()
+            }
+        }
     }
 }
